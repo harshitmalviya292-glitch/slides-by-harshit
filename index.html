@@ -5,14 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#101828">
-  <meta name="description" content="Slides by Harshit - Professional, creative and customized PowerPoint presentation design services.">
+  <meta name="description" content="Slides by Harshit creates creative, professional PowerPoint presentations for students, projects and businesses.">
   <title>Slides by Harshit | Professional PPT Design</title>
 
   <style>
     :root {
       --bg: #0b1020;
       --surface: #121a2e;
-      --surface-light: #1a2540;
       --text: #f7f9ff;
       --muted: #b3bfd5;
       --primary: #7c6cff;
@@ -39,10 +38,6 @@
       text-decoration: none;
     }
 
-    button, input, textarea, select {
-      font: inherit;
-    }
-
     .container {
       width: min(1120px, 92%);
       margin: auto;
@@ -52,7 +47,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(11,16,32,.94);
+      background: rgba(11,16,32,.96);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
@@ -68,7 +63,7 @@
     .logo {
       font-size: 1.35rem;
       font-weight: 800;
-      letter-spacing: -.5px;
+      white-space: nowrap;
     }
 
     .logo span {
@@ -78,13 +73,12 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 20px;
     }
 
     nav a {
       color: var(--muted);
-      font-size: .95rem;
-      transition: color .2s;
+      font-size: .94rem;
     }
 
     nav a:hover {
@@ -105,11 +99,12 @@
       display: inline-block;
       background: linear-gradient(135deg, var(--primary), #5545dd);
       color: white;
-      padding: 13px 21px;
+      padding: 12px 20px;
       border: 0;
       border-radius: 10px;
       font-weight: 700;
       cursor: pointer;
+      text-align: center;
       transition: transform .2s, opacity .2s;
     }
 
@@ -124,16 +119,16 @@
     }
 
     .hero {
-      padding: 100px 0 90px;
+      padding: 95px 0 85px;
       background:
-        radial-gradient(ellipse at 15% 20%, rgba(124,108,255,.18), transparent 42%),
-        radial-gradient(ellipse at 85% 70%, rgba(54,214,197,.10), transparent 38%);
+        radial-gradient(ellipse at 15% 20%, rgba(124,108,255,.2), transparent 42%),
+        radial-gradient(ellipse at 85% 70%, rgba(54,214,197,.12), transparent 38%);
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.15fr .85fr;
-      gap: 55px;
+      gap: 50px;
       align-items: center;
     }
 
@@ -162,7 +157,7 @@
       color: transparent;
     }
 
-    .hero p, .section-intro {
+    .hero p {
       color: var(--muted);
       font-size: 1.08rem;
       max-width: 650px;
@@ -176,7 +171,7 @@
     }
 
     .hero-art {
-      min-height: 350px;
+      min-height: 330px;
       border: 1px solid var(--border);
       border-radius: 25px;
       background: linear-gradient(145deg, #1c2850, #11182b);
@@ -184,8 +179,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      overflow: hidden;
     }
 
     .slide-preview {
@@ -208,7 +201,7 @@
     }
 
     .slide-preview h2 {
-      font-size: clamp(1.5rem, 4vw, 2.7rem);
+      font-size: clamp(1.6rem, 4vw, 2.7rem);
       line-height: 1.1;
       margin: 15px 0;
     }
@@ -219,12 +212,12 @@
     }
 
     section {
-      padding: 80px 0;
+      padding: 78px 0;
     }
 
     .section-heading {
       text-align: center;
-      margin-bottom: 42px;
+      margin-bottom: 40px;
     }
 
     .section-heading h2 {
@@ -234,48 +227,47 @@
 
     .section-heading p {
       color: var(--muted);
-      max-width: 650px;
+      max-width: 680px;
       margin: auto;
     }
 
-    .services-grid {
+    .services-grid,
+    .process-grid,
+    .samples-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
     }
 
-    .service-card {
-      padding: 28px;
+    .service-card,
+    .sample-card {
+      padding: 28px 24px;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 17px;
       transition: transform .2s, border-color .2s;
     }
 
-    .service-card:hover {
+    .service-card:hover,
+    .sample-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(124,108,255,.7);
+      border-color: var(--primary);
     }
 
-    .service-icon {
-      font-size: 2rem;
+    .service-icon,
+    .sample-icon {
+      font-size: 2.3rem;
       margin-bottom: 15px;
     }
 
-    .service-card h3 {
-      font-size: 1.2rem;
+    .service-card h3,
+    .sample-card h3 {
       margin-bottom: 10px;
     }
 
-    .service-card p {
+    .service-card p,
+    .sample-card p {
       color: var(--muted);
-      font-size: .96rem;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
     }
 
     .process-card {
@@ -304,12 +296,54 @@
       border-bottom: 1px solid var(--border);
     }
 
+    .sample-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .sample-card p {
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+
+    .sample-card .button {
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    .folder-card {
+      margin-top: 30px;
+      padding: 32px 24px;
+      border-radius: 18px;
+      border: 1px solid rgba(54,214,197,.3);
+      background: linear-gradient(135deg, rgba(54,214,197,.08), rgba(124,108,255,.1));
+      text-align: center;
+    }
+
+    .folder-card .folder-icon {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .folder-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .folder-card p {
+      color: var(--muted);
+      margin: 0 auto 20px;
+      max-width: 600px;
+    }
+
     .preview-box {
+      margin-top: 30px;
+      padding: 14px;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 18px;
       overflow: hidden;
-      padding: 14px;
     }
 
     .preview-box iframe {
@@ -327,14 +361,13 @@
     }
 
     .order-section {
-      background:
-        radial-gradient(ellipse at 50% 0%, rgba(124,108,255,.12), transparent 60%);
+      background: radial-gradient(ellipse at 50% 0%, rgba(124,108,255,.12), transparent 60%);
     }
 
     .form-wrapper {
       max-width: 850px;
       margin: 32px auto 0;
-      padding: 15px;
+      padding: 12px;
       border: 1px solid var(--border);
       border-radius: 18px;
       background: white;
@@ -353,6 +386,11 @@
       text-align: center;
       color: var(--muted);
       margin-top: 22px;
+    }
+
+    .form-fallback a {
+      color: var(--secondary);
+      text-decoration: underline;
     }
 
     .contact-card {
@@ -378,7 +416,7 @@
       font-size: .9rem;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
       .hero-grid {
         grid-template-columns: 1fr;
         gap: 35px;
@@ -388,12 +426,9 @@
         padding: 65px 0;
       }
 
-      .hero-art {
-        min-height: 270px;
-      }
-
       .services-grid,
-      .process-grid {
+      .process-grid,
+      .samples-grid {
         grid-template-columns: 1fr;
       }
 
@@ -443,7 +478,6 @@
 
       .hero-actions .button {
         width: 100%;
-        text-align: center;
       }
 
       .slide-preview {
@@ -463,8 +497,11 @@
     <div class="container navbar">
       <a href="#home" class="logo">Slides <span>by Harshit</span></a>
 
-      <button class="menu-button" id="menuButton"
-        aria-label="Toggle navigation" aria-expanded="false">
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Toggle navigation"
+        aria-expanded="false">
         ☰ Menu
       </button>
 
@@ -472,7 +509,7 @@
         <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#process">How It Works</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#portfolio">Samples</a>
         <a href="#order">Order Now</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -480,11 +517,14 @@
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">Creative Presentations • Clear Ideas</span>
           <h1>Present Your Ideas <span>Beautifully.</span></h1>
+
           <p>
             Professional and creative PowerPoint presentations for students,
             projects, businesses and educational needs. Turn your ideas into
@@ -493,11 +533,11 @@
 
           <div class="hero-actions">
             <a href="#order" class="button">Order Your PPT →</a>
-            <a href="#portfolio" class="button secondary">View Portfolio</a>
+            <a href="#portfolio" class="button secondary">View Samples</a>
           </div>
         </div>
 
-        <div class="hero-art" aria-label="Presentation design preview">
+        <div class="hero-art">
           <div class="slide-preview">
             <small>SLIDES BY HARSHIT</small>
             <h2>Ideas into<br>Impact.</h2>
@@ -507,6 +547,7 @@
       </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services">
       <div class="container">
         <div class="section-heading">
@@ -548,6 +589,7 @@
       </div>
     </section>
 
+    <!-- PROCESS -->
     <section id="process">
       <div class="container">
         <div class="section-heading">
@@ -578,28 +620,102 @@
             <span class="number">STEP 03</span>
             <h3>Receive Your Presentation</h3>
             <p>
-              The final delivery details, timeline and price can be
-              confirmed before the work begins.
+              Confirm delivery details, timeline and price before
+              work begins.
             </p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- PORTFOLIO AND SAMPLES FOLDER -->
     <section class="portfolio" id="portfolio">
       <div class="container">
         <div class="section-heading">
-          <h2>My Presentation Preview</h2>
+          <h2>My PowerPoint Samples</h2>
           <p>
-            Explore the PowerPoint sample below. If the preview is unavailable,
-            use the button to open the file directly.
+            Explore my presentation designs. Open an individual sample
+            or browse the complete Google Drive folder.
           </p>
+        </div>
+
+        <div class="samples-grid">
+
+          <!-- SAMPLE 1: Existing PowerPoint -->
+          <article class="sample-card">
+            <div class="sample-icon">📊</div>
+            <h3>Sample 1</h3>
+            <p>PowerPoint Presentation</p>
+
+            <a
+              class="button"
+              href="https://drive.google.com/file/d/1LECAHV3kEnI_n5c0yreH8Q2BGCpD8Znu/view"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Sample ↗
+            </a>
+          </article>
+
+          <!-- SAMPLE 2: Add a real file link when ready -->
+          <article class="sample-card">
+            <div class="sample-icon">🎓</div>
+            <h3>Sample 2</h3>
+            <p>Educational Presentation</p>
+
+            <a
+              class="button"
+              href="https://drive.google.com/drive/folders/1IhKuapeWENqtRqVGckBAayPC7k4jNr1q?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer">
+              Browse Samples ↗
+            </a>
+          </article>
+
+          <!-- SAMPLE 3: Opens your complete sample folder -->
+          <article class="sample-card">
+            <div class="sample-icon">💼</div>
+            <h3>Sample 3</h3>
+            <p>More Presentation Designs</p>
+
+            <a
+              class="button"
+              href="https://drive.google.com/drive/folders/1IhKuapeWENqtRqVGckBAayPC7k4jNr1q?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer">
+              Browse Samples ↗
+            </a>
+          </article>
+
+        </div>
+
+        <!-- COMPLETE GOOGLE DRIVE SAMPLE FOLDER -->
+        <div class="folder-card">
+          <div class="folder-icon">📁</div>
+          <h3>Explore All PowerPoint Samples</h3>
+          <p>
+            Browse the complete collection of presentation samples
+            in my Google Drive folder.
+          </p>
+
+          <a
+            class="button"
+            href="https://drive.google.com/drive/folders/1IhKuapeWENqtRqVGckBAayPC7k4jNr1q?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            View All Samples ↗
+          </a>
+        </div>
+
+        <!-- FEATURED POWERPOINT PREVIEW -->
+        <div class="section-heading" style="margin-top: 65px; margin-bottom: 25px;">
+          <h2>Featured Presentation</h2>
+          <p>Preview the featured PowerPoint directly on this website.</p>
         </div>
 
         <div class="preview-box">
           <iframe
-            src="https://drive.google.com/drive/folders/1IhKuapeWENqtRqVGckBAayPC7k4jNr1q?usp=drive_link"
-            title="Slides by Harshit PowerPoint preview"
+            src="https://drive.google.com/file/d/1LECAHV3kEnI_n5c0yreH8Q2BGCpD8Znu/preview"
+            title="Slides by Harshit featured PowerPoint preview"
             loading="lazy"
             allow="autoplay">
           </iframe>
@@ -607,16 +723,17 @@
 
         <div class="preview-actions">
           <a
-            class="button"
-            href="https://drive.google.com/drive/folders/1IhKuapeWENqtRqVGckBAayPC7k4jNr1q?usp=drive_link/view?usp=drive_link"
+            class="button secondary"
+            href="https://drive.google.com/file/d/1LECAHV3kEnI_n5c0yreH8Q2BGCpD8Znu/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer">
-            Open PowerPoint File ↗
+            Open Featured PowerPoint ↗
           </a>
         </div>
       </div>
     </section>
 
+    <!-- GOOGLE ORDER FORM -->
     <section class="order-section" id="order">
       <div class="container">
         <div class="section-heading">
@@ -637,18 +754,18 @@
         </div>
 
         <p class="form-fallback">
-          Having trouble viewing the form?
+          Form not showing?
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSdiU_ngr4VNoAn3Vf9SD2mfZwOoszyK9S5N87rqdJZBuWVPLA/viewform?usp=dialog"
             target="_blank"
-            rel="noopener noreferrer"
-            style="color: var(--secondary); text-decoration: underline;">
-            Open the Order Form in a New Tab
+            rel="noopener noreferrer">
+            Open Order Form in a New Tab
           </a>
         </p>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
       <div class="container">
         <div class="section-heading">
@@ -666,11 +783,14 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
     <div class="container">
-      <p>© <span id="year"></span> Slides by Harshit. All rights reserved.</p>
+      <p>
+        © <span id="year"></span> Slides by Harshit. All rights reserved.
+      </p>
       <p>Designed with creativity and care.</p>
     </div>
   </footer>
