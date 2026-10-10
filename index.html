@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Slides by Harshit creates professional PowerPoint presentations for students, colleges, IT projects and businesses.">
+
+<title>Slides by Harshit | Professional PPT Design</title>
+
+<style>
+:root {
+  --navy: #06152f;
+  --navy2: #0c3270;
+  --blue: #1677ff;
+  --cyan: #18cfff;
+  --ink: #102044;
+  --muted: #61708c;
+  --bg: #f5f8fc;
+  --white: #ffffff;
+  --line: #dfe7f2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* NAVIGATION */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.brand img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: white;
+}
+
+.brand small {
+  display: block;
+  color: #70809b;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  margin-top: 5px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.links a {
+  color: #53627c;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.links a:hover {
+  color: var(--blue);
+}
+
+.links .navbtn {
+  background: var(--blue);
+  color: white;
+  padding: 11px 17px;
+  border-radius: 10px;
+}
+
+.links .navbtn:hover {
+  background: var(--navy2);
+  color: white;
+}
+
+.menuBtn {
+  display: none;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 11px;
+  padding: 13px 20px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px #06152f18;
+}
+
+.primary {
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  color: #04152d;
+}
+
+.ghost {
+  border: 1px solid #7185a5;
+  color: white;
+  margin-left: 10px;
+}
+
+/* HERO */
+
+.hero {
+  background:
+    radial-gradient(circle at 85% 20%, #174a91 0, #0c3270 28%, #06152f 68%);
+  color: white;
+  padding: 78px 0 74px;
+  overflow: hidden;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid rgba(24,207,255,.4);
+  color: #9cefff;
+  padding: 8px 13px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.05;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: var(--cyan);
+}
+
+.hero p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #c8d5e9;
+  max-width: 630px;
+}
+
+.heroFeatures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.feature {
+  border: 1px solid #ffffff20;
+  background: #ffffff0c;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #dbe7f7;
+}
+
+.feature strong {
+  display: block;
+  margin-bottom: 4px;
+  color: white;
+}
+
+.heroCard {
+  background: #ffffff0e;
+  border: 1px solid #ffffff25;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 20px 65px #0002;
+}
+
+.heroCard h3 {
+  margin-bottom: 22px;
+  font-size: 23px;
+}
+
+.checks {
+  display: grid;
+  gap: 16px;
+  color: #dbe7f7;
+  font-size: 14px;
+}
+
+.checks div::before {
+  content: "✓";
+  color: var(--cyan);
+  font-weight: 900;
+  margin-right: 11px;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 76px 0;
+}
+
+.sectionHead {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+.sectionHead h2 {
+  font-size: clamp(29px, 4vw, 40px);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.sectionHead p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.eyebrow {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* SERVICES */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 8px 30px #0c224608;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px #0c224612;
+}
+
+.icon {
+  font-size: 31px;
+  margin-bottom: 5px;
+}
+
+.card h3 {
+  margin: 10px 0 8px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* PRICING */
+
+.pricing {
+  background: #eef4fb;
+}
+
+.priceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.priceCard {
+  position: relative;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 9px 28px #10204408;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.priceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px #10204412;
+}
+
+.priceCard.featured {
+  border: 2px solid var(--blue);
+}
+
+.popular {
+  position: absolute;
+  top: -13px;
+  right: 17px;
+  background: var(--blue);
+  color: white;
+  border-radius: 20px;
+  padding: 6px 11px;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.priceIcon {
+  width: 49px;
+  height: 49px;
+  border-radius: 14px;
+  background: #eaf3ff;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+}
+
+.priceCard h3 {
+  margin: 17px 0 7px;
+  font-size: 20px;
+}
+
+.priceCard .desc {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 44px;
+}
+
+.price {
+  font-size: 35px;
+  font-weight: 900;
+  color: var(--navy);
+  margin: 13px 0 3px;
+}
+
+.price small {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.priceCard ul {
+  padding-left: 19px;
+  margin: 10px 0 20px;
+  color: #53627c;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.priceCard .btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+.priceNote {
+  margin-top: 27px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* SAMPLE PRESENTATIONS */
+
+.samples {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.sample {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform .2s;
+}
+
+.sample:hover {
+  transform: translateY(-4px);
+}
+
+.cover {
+  min-height: 185px;
+  padding: 24px;
+  color: white;
+  background: linear-gradient(135deg, #09214a, #168cff);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.sample:nth-child(2) .cover {
+  background: linear-gradient(135deg, #0b2941, #00a9b8);
+}
+
+.sample:nth-child(3) .cover {
+  background: linear-gradient(135deg, #17224d, #6b7cff);
+}
+
+.sample:nth-child(4) .cover {
+  background: linear-gradient(135deg, #06152f, #635bff);
+}
+
+.sample:nth-child(5) .cover {
+  background: linear-gradient(135deg, #54215e, #ef7d55);
+}
+
+.sample:nth-child(6) .cover {
+  background: linear-gradient(135deg, #174a91, #18cfff);
+}
+
+.cover small {
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+
+.cover h3 {
+  font-size: 23px;
+  line-height: 1.3;
+  margin-top: 9px;
+}
+
+.sample .body {
+  padding: 18px;
+}
+
+.sample p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ORDER SECTION */
+
+.order {
+  background: white;
+}
+
+.orderGrid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.orderInfo {
+  background: linear-gradient(150deg, #06152f, #0c3270);
+  color: white;
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.orderInfo h2 {
+  font-size: 32px;
+  line-height: 1.25;
+  margin: 18px 0;
+}
+
+.orderInfo p {
+  color: #c3d1e5;
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+.orderInfo ul {
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.orderInfo li {
+  margin: 15px 0;
+  color: #d9e4f3;
+  font-size: 14px;
+}
+
+.contactHint {
+  margin-top: 24px;
+  border-top: 1px solid #ffffff25;
+  padding-top: 18px;
+  font-size: 13px;
+  color: #c3d1e5;
+  line-height: 1.8;
+}
+
+.form {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 25px;
+  box-shadow: 0 10px 35px #0c22400b;
+  min-width: 0;
+}
+
+.form h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.formIntro {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.google-form-frame {
+  display: block;
+  width: 100%;
+  height: 1450px;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.formDirectLink {
+  display: inline-block;
+  color: var(--blue);
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.finePrint {
+  font-size: 11px;
+  color: #73819a;
+  line-height: 1.8;
+  margin-top: 15px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #06152f;
+  color: #aebed6;
+  padding: 32px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+footer strong {
+  color: white;
+  font-size: 17px;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.footerLinks a:hover {
+  color: var(--cyan);
+}
+
+footer p {
+  margin-top: 17px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+  .heroGrid,
+  .orderGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards,
+  .samples,
+  .priceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    padding-top: 55px;
+  }
+
+  .heroCard {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    padding: 0 17px;
+  }
+
+  .nav {
+    min-height: 68px;
+  }
+
+  .brand img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .brand {
+    font-size: 14px;
+  }
+
+  .brand small {
+    font-size: 9px;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px 22px;
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .links a {
+    margin: 0;
+  }
+
+  .links .navbtn {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .heroFeatures {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  section {
+    padding: 55px 0;
+  }
+
+  .cards,
+  .samples,
+  .priceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .form,
+  .orderInfo,
+  .heroCard {
+    padding: 21px;
+  }
+
+  .sectionHead h2 {
+    font-size: 31px;
+  }
+
+  .priceCard .desc {
+    min-height: 0;
+  }
+
+  .ghost {
+    margin: 12px 0 0;
+  }
+
+  .google-form-frame {
+    height: 1550px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+  <div class="wrap nav">
+
+    <a class="brand" href="#home">
+      <img
+        src="logo.png"
+        alt="Slides by Harshit logo"
+        onerror="this.style.display='none'"
+      >
+
+      <span>
+        Slides by Harshit
+        <small>PRESENTATION DESIGN STUDIO</small>
+      </span>
+    </a>
+
+    <button
+      class="menuBtn"
+      id="menuBtn"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >☰</button>
+
+    <nav class="links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#samples">Samples</a>
+      <a href="#order" class="navbtn">Order Now</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+  <div class="wrap heroGrid">
+
+    <div>
+      <span class="tag">PROFESSIONAL PPT DESIGN</span>
+
+      <h1>
+        Your idea.<br>
+        <span>Better slides.</span>
+      </h1>
+
+      <p>
+        Turn your ideas into clean, modern and professional PowerPoint
+        presentations for school, college, BCA, IT projects and business.
+      </p>
+
+      <div style="margin-top:25px">
+        <a class="btn primary" href="#pricing">Explore Prices</a>
+        <a class="btn ghost" href="#samples">View Samples</a>
+      </div>
+
+      <div class="heroFeatures">
+        <div class="feature">
+          <strong>⚡ Fast Delivery</strong>
+          Deadline discussed before starting
+        </div>
+
+        <div class="feature">
+          <strong>✓ Original Design</strong>
+          Designed for your topic
+        </div>
+
+        <div class="feature">
+          <strong>₹ Student Friendly</strong>
+          Affordable starting prices
+        </div>
+
+        <div class="feature">
+          <strong>⌂ Online Service</strong>
+          Order from anywhere
+        </div>
+      </div>
+    </div>
+
+    <div class="heroCard">
+      <h3>Why choose Slides by Harshit?</h3>
+
+      <div class="checks">
+        <div>Modern, clean layouts</div>
+        <div>Topic-focused visual design</div>
+        <div>Project, business and BCA presentations</div>
+        <div>Custom requirements and themes</div>
+        <div>Reference document upload option</div>
+        <div>Clear pricing before work begins</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+
+<section id="services">
+  <div class="wrap">
+
+    <div class="sectionHead">
+      <span class="eyebrow">WHAT WE OFFER</span>
+      <h2>Our Services</h2>
+      <p>Choose the type of presentation you need.</p>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="icon">🎓</div>
+        <h3>Project PPT</h3>
+        <p>
+          School, college, university projects, assignments and seminars.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">💼</div>
+        <h3>Business PPT</h3>
+        <p>
+          Business plans, pitch decks, proposals, reports and strategies.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">💻</div>
+        <h3>IT &amp; Tech PPT</h3>
+        <p>
+          SQL, programming, data analytics, cybersecurity and software.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🎨</div>
+        <h3>PPT Redesign</h3>
+        <p>
+          Improve existing slide layouts, formatting and visual consistency.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">📄</div>
+        <h3>PDF / Word to PPT</h3>
+        <p>
+          Convert your provided content into an organised presentation.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">✨</div>
+        <h3>Custom Presentation</h3>
+        <p>
+          Custom themes, colours, layouts and requirements for your topic.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING SECTION -->
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+
+    <div class="sectionHead">
+      <span class="eyebrow">SIMPLE STARTING PRICES</span>
+      <h2>Choose Your PPT Service</h2>
+      <p>
+        Select a service and submit your order through our Google Form.
+        Final pricing depends on the slide count, content and complexity.
+      </p>
+    </div>
+
+    <div class="priceGrid">
+
+      <article class="priceCard">
+        <div class="priceIcon">🎓</div>
+
+        <h3>Project PPT</h3>
+
+        <p class="desc">
+          School, college, university and BCA projects.
+        </p>
+
+        <div class="price">₹99<small>+</small></div>
+
+        <ul>
+          <li>Academic presentations</li>
+          <li>Project and seminar slides</li>
+          <li>Student-friendly starting price</li>
+        </ul>
+
+        <button class="btn primary chooseService" type="button">
+          Choose Service
+        </button>
+      </article>
+
+      <article class="priceCard">
+        <div class="priceIcon">💼</div>
+
+        <h3>Business PPT</h3>
+
+        <p class="desc">
+          Business plans, proposals and pitch decks.
+        </p>
+
+        <div class="price">₹199<small>+</small></div>
+
+        <ul>
+          <li>Professional business layouts</li>
+          <li>Strategy and proposal slides</li>
+          <li>Structured visual storytelling</li>
+        </ul>
+
+        <button class="btn primary chooseService" type="button">
+          Choose Service
+        </button>
+      </article>
+
+      <article class="priceCard featured">
+        <span class="popular">TECH FOCUS</span>
+
+        <div class="priceIcon">💻</div>
+
+        <h3>IT &amp; Tech PPT</h3>
+
+        <p class="desc">
+          Data analytics, cybersecurity, software and technology.
+        </p>
+
+        <div class="price">₹299<small>+</small></div>
+
+        <ul>
+          <li>IT and computer science topics</li>
+          <li>Technology-focused layouts</li>
+          <li>Diagrams and visual summaries</li>
+        </ul>
+
+        <button class="btn primary chooseService" type="button">
+          Choose Service
+        </button>
+      </article>
+
+      <article class="priceCard">
+        <div class="priceIcon">🔄</div>
+
+        <h3>PPT Redesign</h3>
+
+        <p class="desc">
+          Give your existing slides a refreshed visual style.
+        </p>
+
+        <div class="price">₹149<small>+</small></div>
+
+        <ul>
+          <li>Layout and formatting improvements</li>
+          <li>Colour and typography consistency</li>
+          <li>Existing PPT editing</li>
+        </ul>
+
+        <button class="btn primary chooseService" type="button">
+          Choose Service
+        </button>
+      </article>
+
+      <article class="priceCard">
+        <div class="priceIcon">📄</div>
+
+        <h3>PDF / Word to PPT</h3>
+
+        <p class="desc">
+          Transform your document content into presentation slides.
+        </p>
+
+        <div class="price">₹149<small>+</small></div>
+
+        <ul>
+          <li>Document-to-slide conversion</li>
+          <li>Organised content structure</li>
+          <li>Readable slide layouts</li>
+        </ul>
+
+        <button class="btn primary chooseService" type="button">
+          Choose Service
+        </button>
+      </article>
+
+      <article class="priceCard">
+        <div class="priceIcon">✨</div>
+
+        <h3>Custom PPT</h3>
+
+        <p class="desc">
+          For specialised topics or custom presentation needs.
+        </p>
+
+        <div class="price">Custom</div>
+
+        <ul>
+          <li>Discuss your requirements</li>
+          <li>Agree on scope and pricing</li>
+          <li>Custom design direction</li>
+        </ul>
+
+        <button class="btn primary chooseService" type="button">
+          Request Quote
+        </button>
+      </article>
+
+    </div>
+
+    <p class="priceNote">
+      Prices are starting prices, not guaranteed final totals.
+      Confirm the final quote and delivery date before work begins.
+    </p>
+
+  </div>
+</section>
+
+<!-- SAMPLE PRESENTATIONS -->
+
+<section id="samples">
+  <div class="wrap">
+
+    <div class="sectionHead">
+      <span class="eyebrow">DESIGN INSPIRATION</span>
+      <h2>Sample Presentations</h2>
+      <p>
+        Example presentation styles. Replace these with your actual work
+        when you have samples ready.
+      </p>
+    </div>
+
+    <div class="samples">
+
+      <article class="sample">
+        <div class="cover">
+          <small>SAMPLE 01</small>
+          <h3>Cyber Security</h3>
+        </div>
+
+        <div class="body">
+          <p>
+            Dark, modern technology presentation with clear visual hierarchy.
+          </p>
+        </div>
+      </article>
+
+      <article class="sample">
+        <div class="cover">
+          <small>SAMPLE 02</small>
+          <h3>Data Analytics</h3>
+        </div>
+
+        <div class="body">
+          <p>
+            Charts, dashboards and clean data presentation layouts.
+          </p>
+        </div>
+      </article>
+
+      <article class="sample">
+        <div class="cover">
+          <small>SAMPLE 03</small>
+          <h3>Business Plan</h3>
+        </div>
+
+        <div class="body">
+          <p>
+            Professional strategy and growth presentation concept.
+          </p>
+        </div>
+      </article>
+
+      <article class="sample">
+        <div class="cover">
+          <small>SAMPLE 04</small>
+          <h3>BCA Project</h3>
+        </div>
+
+        <div class="body">
+          <p>
+            Academic slides for software and computer science projects.
+          </p>
+        </div>
+      </article>
+
+      <article class="sample">
+        <div class="cover">
+          <small>SAMPLE 05</small>
+          <h3>Marketing Strategy</h3>
+        </div>
+
+        <div class="body">
+          <p>
+            Organised campaign, audience and marketing plan slides.
+          </p>
+        </div>
+      </article>
+
+      <article class="sample">
+        <div class="cover">
+          <small>SAMPLE 06</small>
+          <h3>Education</h3>
+        </div>
+
+        <div class="body">
+          <p>
+            Readable educational content with structured sections.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE FORM ORDER SECTION -->
+
+<section class="order" id="order">
+  <div class="wrap orderGrid">
+
+    <div class="orderInfo">
+      <span class="tag">ORDER ONLINE</span>
+
+      <h2>Tell me what you need.</h2>
+
+      <p>
+        Share your topic, selected service, slide count and requirements.
+        Your final price and deadline can be confirmed after reviewing
+        your request.
+      </p>
+
+      <ul>
+        <li>Choose your PPT service</li>
+        <li>Select the number of slides</li>
+        <li>Describe your requirements</li>
+        <li>Submit your request through Google Forms</li>
+        <li>Your response is recorded in the linked Google Sheet</li>
+      </ul>
+
+      <div class="contactHint">
+        <strong>Need a custom quote?</strong><br>
+        Select the Custom PPT option in the form and describe your project.
+      </div>
+    </div>
+
+    <div class="form">
+      <h2>Place Your Order</h2>
+
+      <p class="formIntro">
+        Complete the form below. Select your service and pricing option
+        in the form, then submit your order.
+      </p>
+
+      <iframe
+        class="google-form-frame"
+        id="googleOrderForm"
+        title="Slides by Harshit Order Form"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdiU_ngr4VNoAn3Vf9SD2mfZwOoszyK9S5N87rqdJZBuWVPLA/viewform?embedded=true"
+        width="100%"
+        height="1450"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        loading="lazy">
+        Loading Google Form…
+      </iframe>
+
+      <a
+        class="formDirectLink"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdiU_ngr4VNoAn3Vf9SD2mfZwOoszyK9S5N87rqdJZBuWVPLA/viewform"
+        target="_blank"
+        rel="noopener noreferrer">
+        Open the order form in a new tab
+      </a>
+
+      <p class="finePrint">
+        Prices shown on this website are starting prices. The final price
+        and delivery date will be confirmed after reviewing your requirements.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="wrap">
+
+    <strong>Slides by Harshit</strong>
+
+    <p>Professional • Creative • Reliable</p>
+
+    <div class="footerLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#samples">Samples</a>
+      <a href="#order">Order Now</a>
+    </div>
+
+    <p>
+      © <span id="year"></span> Slides by Harshit. All rights reserved.
+    </p>
+
+  </div>
+</footer>
+
+<script>
+/* Automatically update the footer year */
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+/* Mobile navigation */
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function () {
+  const isOpen = navLinks.classList.toggle("open");
+
+  menuBtn.setAttribute("aria-expanded", String(isOpen));
+  menuBtn.textContent = isOpen ? "✕" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    navLinks.classList.remove("open");
+
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.textContent = "☰";
+  });
+});
+
+/* Pricing cards scroll to the embedded Google Form */
+document.querySelectorAll(".chooseService").forEach(function (button) {
+  button.addEventListener("click", function () {
+    document.getElementById("order").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+});
+</script>
+
+</body>
+</html>
