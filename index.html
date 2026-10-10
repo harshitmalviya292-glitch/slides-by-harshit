@@ -1,36 +1,29 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#101828">
-
-  <title>Slides by Harshit | Professional Presentation Design</title>
-
-  <meta name="description"
-    content="Slides by Harshit creates professional PowerPoint presentations for students, projects, business and more.">
+  <meta name="description" content="Slides by Harshit - Professional, creative and customized PowerPoint presentation design services.">
+  <title>Slides by Harshit | Professional PPT Design</title>
 
   <style>
     :root {
-      --bg: #f6f8fc;
-      --dark: #101828;
-      --primary: #5145e5;
-      --primary-light: #eeedff;
-      --text: #344054;
-      --muted: #667085;
-      --white: #ffffff;
-      --border: #e4e7ec;
-      --radius: 18px;
+      --bg: #0b1020;
+      --surface: #121a2e;
+      --surface-light: #1a2540;
+      --text: #f7f9ff;
+      --muted: #b3bfd5;
+      --primary: #7c6cff;
+      --secondary: #36d6c5;
+      --border: rgba(255,255,255,.12);
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    html {
       scroll-behavior: smooth;
     }
 
@@ -38,7 +31,7 @@
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.65;
+      line-height: 1.6;
     }
 
     a {
@@ -46,10 +39,7 @@
       text-decoration: none;
     }
 
-    button,
-    input,
-    select,
-    textarea {
+    button, input, textarea, select {
       font: inherit;
     }
 
@@ -59,187 +49,193 @@
     }
 
     header {
-      background: var(--dark);
-      color: white;
       position: sticky;
       top: 0;
       z-index: 100;
+      background: rgba(11,16,32,.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
     }
 
     .navbar {
       min-height: 76px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
     }
 
     .logo {
-      font-size: 22px;
+      font-size: 1.35rem;
       font-weight: 800;
-      letter-spacing: -0.6px;
+      letter-spacing: -.5px;
     }
 
     .logo span {
-      color: #a9a2ff;
+      color: var(--secondary);
     }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 24px;
     }
 
     nav a {
-      font-size: 14px;
-      color: #eaecf0;
+      color: var(--muted);
+      font-size: .95rem;
+      transition: color .2s;
     }
 
     nav a:hover {
-      color: #bdb7ff;
+      color: var(--secondary);
+    }
+
+    .menu-button {
+      display: none;
+      border: 1px solid var(--border);
+      color: white;
+      background: var(--surface);
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
     }
 
     .button {
       display: inline-block;
+      background: linear-gradient(135deg, var(--primary), #5545dd);
+      color: white;
+      padding: 13px 21px;
       border: 0;
       border-radius: 10px;
-      padding: 12px 20px;
-      background: var(--primary);
-      color: white;
       font-weight: 700;
       cursor: pointer;
-      text-align: center;
-      transition: 0.2s;
+      transition: transform .2s, opacity .2s;
     }
 
     .button:hover {
-      background: #4035c9;
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      opacity: .93;
     }
 
-    .button-light {
-      background: white;
-      color: var(--dark);
-    }
-
-    .button-light:hover {
-      background: #ecebff;
+    .button.secondary {
+      background: transparent;
+      border: 1px solid var(--border);
     }
 
     .hero {
+      padding: 100px 0 90px;
       background:
-        radial-gradient(circle at 85% 20%, #373080 0, transparent 35%),
-        linear-gradient(135deg, #101828, #20244d);
-      color: white;
-      padding: 90px 0 100px;
+        radial-gradient(ellipse at 15% 20%, rgba(124,108,255,.18), transparent 42%),
+        radial-gradient(ellipse at 85% 70%, rgba(54,214,197,.10), transparent 38%);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 45px;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 55px;
       align-items: center;
     }
 
     .eyebrow {
       display: inline-block;
-      background: rgba(255,255,255,0.1);
-      color: #d8d5ff;
-      border: 1px solid rgba(255,255,255,0.15);
-      padding: 7px 13px;
+      color: var(--secondary);
+      background: rgba(54,214,197,.09);
+      border: 1px solid rgba(54,214,197,.25);
       border-radius: 30px;
-      font-size: 13px;
+      padding: 7px 13px;
       margin-bottom: 22px;
+      font-size: .88rem;
     }
 
     h1 {
-      font-size: clamp(36px, 5vw, 60px);
-      line-height: 1.12;
-      letter-spacing: -1.8px;
+      font-size: clamp(2.6rem, 6vw, 4.7rem);
+      line-height: 1.08;
+      letter-spacing: -2px;
       margin-bottom: 22px;
     }
 
-    .highlight {
-      color: #aaa3ff;
+    h1 span {
+      background: linear-gradient(100deg, #9b91ff, #36d6c5);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
-    .hero p {
-      color: #d0d5dd;
-      font-size: 17px;
-      max-width: 560px;
-      margin-bottom: 28px;
+    .hero p, .section-intro {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 650px;
     }
 
-    .hero-buttons {
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 13px;
+      margin-top: 30px;
     }
 
-    .preview-art {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 24px;
-      padding: 20px;
-      transform: rotate(1deg);
+    .hero-art {
+      min-height: 350px;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      background: linear-gradient(145deg, #1c2850, #11182b);
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .slide-art {
-      background: white;
-      color: var(--dark);
+    .slide-preview {
+      width: 100%;
+      aspect-ratio: 16 / 10;
       border-radius: 14px;
-      min-height: 275px;
-      padding: 30px;
+      padding: 25px;
+      background: linear-gradient(135deg, #7668ff, #35266f);
+      box-shadow: 0 25px 65px rgba(0,0,0,.35);
+      transform: rotate(-3deg);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 25px 70px rgba(0,0,0,0.2);
+      justify-content: center;
     }
 
-    .slide-art .mini-label {
-      color: var(--primary);
-      font-weight: 800;
-      font-size: 12px;
-      letter-spacing: 2px;
+    .slide-preview small {
+      letter-spacing: 3px;
+      color: #d8d4ff;
+      font-weight: bold;
     }
 
-    .slide-art h2 {
-      font-size: 32px;
-      line-height: 1.15;
-      margin: 18px 0;
+    .slide-preview h2 {
+      font-size: clamp(1.5rem, 4vw, 2.7rem);
+      line-height: 1.1;
+      margin: 15px 0;
     }
 
-    .slide-art .decor {
-      height: 7px;
-      width: 85%;
-      background: #e5e3ff;
-      border-radius: 10px;
-      margin: 9px 0;
-    }
-
-    .slide-art .decor.short {
-      width: 55%;
+    .slide-preview p {
+      color: #e4e0ff;
+      font-size: .95rem;
     }
 
     section {
-      padding: 75px 0;
+      padding: 80px 0;
     }
 
     .section-heading {
       text-align: center;
-      max-width: 700px;
-      margin: 0 auto 42px;
+      margin-bottom: 42px;
     }
 
     .section-heading h2 {
-      color: var(--dark);
-      font-size: clamp(27px, 4vw, 38px);
-      line-height: 1.2;
-      margin-bottom: 13px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 12px;
     }
 
     .section-heading p {
       color: var(--muted);
+      max-width: 650px;
+      margin: auto;
     }
 
     .services-grid {
@@ -249,329 +245,213 @@
     }
 
     .service-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
       padding: 28px;
-      transition: 0.2s;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      transition: transform .2s, border-color .2s;
     }
 
     .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 35px rgba(16,24,40,0.07);
+      transform: translateY(-5px);
+      border-color: rgba(124,108,255,.7);
     }
 
     .service-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: var(--primary-light);
-      font-size: 25px;
-      margin-bottom: 18px;
+      font-size: 2rem;
+      margin-bottom: 15px;
     }
 
     .service-card h3 {
-      color: var(--dark);
-      margin-bottom: 9px;
-      font-size: 19px;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
     }
 
     .service-card p {
       color: var(--muted);
-      font-size: 14px;
+      font-size: .96rem;
     }
 
-    .samples {
-      background: #eef1f8;
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
 
-    .sample-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
+    .process-card {
+      border-left: 3px solid var(--primary);
+      padding: 8px 20px;
     }
 
-    .sample-top {
-      padding: 22px;
-      background: linear-gradient(135deg, #e7e5ff, #f8f8ff);
-    }
-
-    .sample-top span {
-      font-size: 12px;
-      color: var(--primary);
-      font-weight: 800;
+    .process-card .number {
+      color: var(--secondary);
+      font-size: .85rem;
+      font-weight: bold;
       letter-spacing: 1px;
     }
 
-    .sample-top h3 {
-      color: var(--dark);
-      font-size: 23px;
-      margin-top: 10px;
+    .process-card h3 {
+      margin: 8px 0;
     }
 
-    .sample-content {
-      padding: 22px;
-    }
-
-    .sample-content p {
+    .process-card p {
       color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 17px;
     }
 
-    .sample-content .button {
-      width: 100%;
+    .portfolio {
+      background: rgba(255,255,255,.025);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
-    .presentation-box {
-      background: white;
+    .preview-box {
+      background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px;
-      margin-top: 28px;
+      border-radius: 18px;
       overflow: hidden;
+      padding: 14px;
     }
 
-    .presentation-box h3 {
-      color: var(--dark);
-      margin-bottom: 7px;
-    }
-
-    .presentation-box p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 17px;
-    }
-
-    .presentation-frame {
+    .preview-box iframe {
+      display: block;
       width: 100%;
-      height: 520px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: #f2f4f7;
-    }
-
-    .center {
-      text-align: center;
-      margin-top: 18px;
-    }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .step {
-      text-align: center;
-      padding: 15px;
-    }
-
-    .step-number {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--primary);
-      color: white;
-      font-weight: 800;
-      margin: 0 auto 16px;
-    }
-
-    .step h3 {
-      color: var(--dark);
-      margin-bottom: 8px;
-    }
-
-    .step p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .order-section {
-      background: #101828;
-      color: white;
-    }
-
-    .order-section .section-heading h2 {
-      color: white;
-    }
-
-    .order-section .section-heading p {
-      color: #d0d5dd;
-    }
-
-    .order-card {
-      max-width: 720px;
-      margin: auto;
+      height: 550px;
+      border: 0;
+      border-radius: 10px;
       background: white;
-      color: var(--text);
-      border-radius: 20px;
-      padding: 30px;
     }
 
-    .order-card h3 {
-      color: var(--dark);
-      margin-bottom: 8px;
-    }
-
-    .order-card > p {
-      color: var(--muted);
-      margin-bottom: 22px;
-      font-size: 14px;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 17px;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-
-    .field.full {
-      grid-column: 1 / -1;
-    }
-
-    .field label {
-      color: var(--dark);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .field input,
-    .field select,
-    .field textarea {
-      width: 100%;
-      border: 1px solid #d0d5dd;
-      border-radius: 9px;
-      padding: 12px;
-      outline: none;
-      background: white;
-      color: var(--dark);
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(81,69,229,0.1);
-    }
-
-    .field textarea {
-      min-height: 115px;
-      resize: vertical;
-    }
-
-    .order-card .button {
-      width: 100%;
+    .preview-actions {
+      text-align: center;
       margin-top: 20px;
     }
 
-    .note {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 12px;
+    .order-section {
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(124,108,255,.12), transparent 60%);
+    }
+
+    .form-wrapper {
+      max-width: 850px;
+      margin: 32px auto 0;
+      padding: 15px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: white;
+      overflow: hidden;
+    }
+
+    .form-wrapper iframe {
+      display: block;
+      width: 100%;
+      height: 1000px;
+      border: none;
+      background: white;
+    }
+
+    .form-fallback {
       text-align: center;
+      color: var(--muted);
+      margin-top: 22px;
     }
 
     .contact-card {
+      max-width: 760px;
+      margin: auto;
       text-align: center;
-      max-width: 650px;
-      margin: 32px auto 0;
-      padding: 25px;
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: var(--radius);
-    }
-
-    .contact-card h3 {
-      margin-bottom: 8px;
+      padding: 35px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
     }
 
     .contact-card p {
-      color: #d0d5dd;
-      margin-bottom: 18px;
+      color: var(--muted);
+      margin: 10px 0 23px;
     }
 
     footer {
-      background: #0b1220;
-      color: #d0d5dd;
-      text-align: center;
+      border-top: 1px solid var(--border);
       padding: 25px 0;
-      font-size: 13px;
-    }
-
-    footer strong {
-      color: white;
+      color: var(--muted);
+      text-align: center;
+      font-size: .9rem;
     }
 
     @media (max-width: 800px) {
       .hero-grid {
         grid-template-columns: 1fr;
-      }
-
-      .preview-art {
-        max-width: 480px;
-      }
-
-      .services-grid,
-      .steps-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      nav {
-        gap: 12px;
-      }
-
-      nav a {
-        font-size: 12px;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .navbar {
-        padding: 15px 0;
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      nav {
-        width: 100%;
-        flex-wrap: wrap;
+        gap: 35px;
       }
 
       .hero {
-        padding: 60px 0;
+        padding: 65px 0;
+      }
+
+      .hero-art {
+        min-height: 270px;
       }
 
       .services-grid,
-      .steps-grid,
-      .form-grid {
+      .process-grid {
         grid-template-columns: 1fr;
       }
 
-      .field.full {
-        grid-column: auto;
+      nav {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        padding: 20px 5%;
+        background: #10182b;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .preview-box iframe {
+        height: 430px;
+      }
+
+      .form-wrapper {
+        padding: 5px;
+      }
+
+      .form-wrapper iframe {
+        height: 1100px;
       }
 
       section {
-        padding: 55px 0;
+        padding: 60px 0;
+      }
+    }
+
+    @media (max-width: 450px) {
+      h1 {
+        letter-spacing: -1px;
       }
 
-      .order-card {
-        padding: 20px;
+      .hero-actions .button {
+        width: 100%;
+        text-align: center;
       }
 
-      .presentation-frame {
-        height: 380px;
+      .slide-preview {
+        padding: 18px;
+      }
+
+      .preview-box iframe {
+        height: 350px;
       }
     }
   </style>
@@ -581,14 +461,20 @@
 
   <header>
     <div class="container navbar">
-      <a class="logo" href="#home">Slides <span>by Harshit</span></a>
+      <a href="#home" class="logo">Slides <span>by Harshit</span></a>
 
-      <nav aria-label="Main navigation">
+      <button class="menu-button" id="menuButton"
+        aria-label="Toggle navigation" aria-expanded="false">
+        ☰ Menu
+      </button>
+
+      <nav id="navigation">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
-        <a href="#samples">Samples</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#order">Order</a>
+        <a href="#process">How It Works</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#order">Order Now</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -597,40 +483,25 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">PRESENTATION DESIGN SERVICES</span>
-
-          <h1>
-            Turn Your Ideas Into
-            <span class="highlight">Great Presentations.</span>
-          </h1>
-
+          <span class="eyebrow">Creative Presentations • Clear Ideas</span>
+          <h1>Present Your Ideas <span>Beautifully.</span></h1>
           <p>
-            Professional PowerPoint presentations for school projects,
-            college assignments, business ideas and more.
-            Clear content, thoughtful layouts and attractive designs.
+            Professional and creative PowerPoint presentations for students,
+            projects, businesses and educational needs. Turn your ideas into
+            slides that are clear, attractive and easy to understand.
           </p>
 
-          <div class="hero-buttons">
-            <a class="button" href="#order">Order a Presentation</a>
-            <a class="button button-light" href="#samples">View Sample</a>
+          <div class="hero-actions">
+            <a href="#order" class="button">Order Your PPT →</a>
+            <a href="#portfolio" class="button secondary">View Portfolio</a>
           </div>
         </div>
 
-        <div class="preview-art" aria-label="Presentation design example">
-          <div class="slide-art">
-            <div>
-              <span class="mini-label">PRESENTATION DESIGN</span>
-              <h2>Ideas That<br>Make an Impact.</h2>
-              <div class="decor"></div>
-              <div class="decor short"></div>
-            </div>
-
-            <div>
-              <strong>Slides by Harshit</strong>
-              <p style="font-size:12px;color:#667085;margin:4px 0 0;">
-                Creative • Clear • Professional
-              </p>
-            </div>
+        <div class="hero-art" aria-label="Presentation design preview">
+          <div class="slide-preview">
+            <small>SLIDES BY HARSHIT</small>
+            <h2>Ideas into<br>Impact.</h2>
+            <p>Thoughtful design. Powerful presentations.</p>
           </div>
         </div>
       </div>
@@ -639,20 +510,20 @@
     <section id="services">
       <div class="container">
         <div class="section-heading">
-          <h2>What I Can Create for You</h2>
+          <h2>What I Can Create</h2>
           <p>
-            Presentation design for different needs, from classroom projects
-            to business presentations.
+            Presentation design to help communicate your ideas with clarity
+            and a professional look.
           </p>
         </div>
 
         <div class="services-grid">
           <article class="service-card">
             <div class="service-icon">🎓</div>
-            <h3>School & College Projects</h3>
+            <h3>Student Presentations</h3>
             <p>
-              Well-organized slides for assignments, practical projects,
-              seminars and academic topics.
+              School and college projects, assignments, seminar presentations
+              and classroom topics.
             </p>
           </article>
 
@@ -660,139 +531,88 @@
             <div class="service-icon">💼</div>
             <h3>Business Presentations</h3>
             <p>
-              Structured slides for business ideas, proposals, reports
-              and project explanations.
+              Professional slides for business ideas, proposals, reports
+              and project overviews.
             </p>
           </article>
 
           <article class="service-card">
-            <div class="service-icon">🎨</div>
+            <div class="service-icon">✨</div>
             <h3>Custom PPT Design</h3>
             <p>
-              Customized layouts, colors, headings and visual organization
-              according to your requirements.
+              Customized themes, organized content, clean layouts and
+              attractive visual presentation.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="samples" id="samples">
+    <section id="process">
       <div class="container">
         <div class="section-heading">
-          <h2>Presentation Samples</h2>
-          <p>
-            Explore a presentation sample and see how the slides appear
-            in your browser.
-          </p>
+          <h2>How It Works</h2>
+          <p>A simple process to get your presentation started.</p>
         </div>
 
-        <div class="services-grid">
-          <article class="sample-card">
-            <div class="sample-top">
-              <span>POWERPOINT SAMPLE</span>
-              <h3>Presentation Preview</h3>
-            </div>
-
-            <div class="sample-content">
-              <p>
-                Open the PowerPoint presentation shared through Google Drive.
-              </p>
-
-              <a
-                class="button"
-                href="https://drive.google.com/file/d/1LECAHV3kEnI_n5c0yreH8Q2BGCpD8Znu/view"
-                target="_blank"
-                rel="noopener noreferrer">
-                Open Presentation
-              </a>
-            </div>
+        <div class="process-grid">
+          <article class="process-card">
+            <span class="number">STEP 01</span>
+            <h3>Submit Your Requirements</h3>
+            <p>
+              Fill in the order form with your topic, slide count,
+              deadline and design preferences.
+            </p>
           </article>
 
-          <article class="sample-card">
-            <div class="sample-top">
-              <span>DESIGN SERVICE</span>
-              <h3>Academic Slides</h3>
-            </div>
-
-            <div class="sample-content">
-              <p>
-                Slides for school projects, college work and educational topics.
-              </p>
-
-              <a class="button" href="#order">Request a Design</a>
-            </div>
+          <article class="process-card">
+            <span class="number">STEP 02</span>
+            <h3>Discuss Your Project</h3>
+            <p>
+              Your requirements can be reviewed so the presentation
+              matches your needs.
+            </p>
           </article>
 
-          <article class="sample-card">
-            <div class="sample-top">
-              <span>CUSTOM DESIGN</span>
-              <h3>Business Slides</h3>
-            </div>
-
-            <div class="sample-content">
-              <p>
-                Presentation layouts tailored to your content and project goals.
-              </p>
-
-              <a class="button" href="#order">Discuss Your Project</a>
-            </div>
+          <article class="process-card">
+            <span class="number">STEP 03</span>
+            <h3>Receive Your Presentation</h3>
+            <p>
+              The final delivery details, timeline and price can be
+              confirmed before the work begins.
+            </p>
           </article>
-        </div>
-
-        <div class="presentation-box">
-          <h3>Preview Your PowerPoint</h3>
-          <p>
-            If the file is shared with public viewing access and Drive supports
-            previewing it, the presentation will appear below.
-          </p>
-
-          <iframe
-            class="presentation-frame"
-            src="https://drive.google.com/file/d/1LECAHV3kEnI_n5c0yreH8Q2BGCpD8Znu/preview"
-            title="PowerPoint presentation preview"
-            allow="autoplay"
-            allowfullscreen>
-          </iframe>
-
-          <div class="center">
-            <a
-              class="button"
-              href="https://drive.google.com/file/d/1LECAHV3kEnI_n5c0yreH8Q2BGCpD8Znu/view"
-              target="_blank"
-              rel="noopener noreferrer">
-              Open in Google Drive
-            </a>
-          </div>
         </div>
       </div>
     </section>
 
-    <section id="how-it-works">
+    <section class="portfolio" id="portfolio">
       <div class="container">
         <div class="section-heading">
-          <h2>How It Works</h2>
-          <p>A simple process to share your requirements.</p>
+          <h2>My Presentation Preview</h2>
+          <p>
+            Explore the PowerPoint sample below. If the preview is unavailable,
+            use the button to open the file directly.
+          </p>
         </div>
 
-        <div class="steps-grid">
-          <article class="step">
-            <div class="step-number">1</div>
-            <h3>Share Your Topic</h3>
-            <p>Tell me your topic, purpose and presentation requirements.</p>
-          </article>
+        <div class="preview-box">
+          <iframe
+            src="https://drive.google.com/file/d/1LECAHV3kEnI_n5c0yreH8Q2BGCpD8Znu/preview"
+            title="Slides by Harshit PowerPoint preview"
+            loading="lazy"
+            allow="autoplay">
+          </iframe>
+        </div>
 
-          <article class="step">
-            <div class="step-number">2</div>
-            <h3>Discuss the Design</h3>
-            <p>Discuss slide count, design style, content and deadline.</p>
-          </article>
-
-          <article class="step">
-            <div class="step-number">3</div>
-            <h3>Receive Your Slides</h3>
-            <p>Agree on the details and delivery method before work begins.</p>
-          </article>
+        <div class="preview-actions">
+          <a
+            class="button"
+            href="https://drive.google.com/file/d/1LECAHV3kEnI_n5c0yreH8Q2BGCpD8Znu/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            Open PowerPoint File ↗
+          </a>
         </div>
       </div>
     </section>
@@ -800,103 +620,49 @@
     <section class="order-section" id="order">
       <div class="container">
         <div class="section-heading">
-          <h2>Let's Build Your Presentation</h2>
+          <h2>Place Your Order</h2>
           <p>
-            Share your requirements through the order form.
-            Include enough detail to explain what you need.
+            Tell me about your presentation requirements using the form below.
+            Please provide accurate details so your project can be reviewed.
           </p>
         </div>
 
-        <div class="order-card">
-          <h3>Presentation Order Enquiry</h3>
-          <p>
-            Fill in the form to submit your presentation requirements.
-          </p>
+        <div class="form-wrapper">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdiU_ngr4VNoAn3Vf9SD2mfZwOoszyK9S5N87rqdJZBuWVPLA/viewform?embedded=true"
+            title="Slides by Harshit order form"
+            loading="lazy">
+            Loading Google Form…
+          </iframe>
+        </div>
 
-          <form id="orderForm">
-            <div class="form-grid">
-              <div class="field">
-                <label for="customerName">Your Name *</label>
-                <input
-                  id="customerName"
-                  name="name"
-                  type="text"
-                  placeholder="Enter your name"
-                  required>
-              </div>
+        <p class="form-fallback">
+          Having trouble viewing the form?
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdiU_ngr4VNoAn3Vf9SD2mfZwOoszyK9S5N87rqdJZBuWVPLA/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color: var(--secondary); text-decoration: underline;">
+            Open the Order Form in a New Tab
+          </a>
+        </p>
+      </div>
+    </section>
 
-              <div class="field">
-                <label for="customerEmail">Email Address *</label>
-                <input
-                  id="customerEmail"
-                  name="email"
-                  type="email"
-                  placeholder="you@example.com"
-                  required>
-              </div>
-
-              <div class="field">
-                <label for="presentationType">Presentation Type *</label>
-                <select id="presentationType" name="type" required>
-                  <option value="">Select a type</option>
-                  <option>School Project</option>
-                  <option>College Assignment</option>
-                  <option>Business Presentation</option>
-                  <option>Educational Presentation</option>
-                  <option>Other</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="slideCount">Approximate Slide Count</label>
-                <select id="slideCount" name="slides">
-                  <option value="">Select slide count</option>
-                  <option>1–5 slides</option>
-                  <option>6–10 slides</option>
-                  <option>11–15 slides</option>
-                  <option>16–20 slides</option>
-                  <option>More than 20 slides</option>
-                </select>
-              </div>
-
-              <div class="field full">
-                <label for="deadline">Required Deadline</label>
-                <input
-                  id="deadline"
-                  name="deadline"
-                  type="date">
-              </div>
-
-              <div class="field full">
-                <label for="details">Topic and Requirements *</label>
-                <textarea
-                  id="details"
-                  name="details"
-                  placeholder="Describe your topic, design preferences and other requirements..."
-                  required></textarea>
-              </div>
-            </div>
-
-            <button class="button" type="submit">
-              Submit Order Enquiry
-            </button>
-
-            <p class="note">
-              Your enquiry will be sent to the Google Form only after you
-              configure the form link below.
-            </p>
-          </form>
+    <section id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Let's Work Together</h2>
+          <p>Have a presentation idea? Submit the order form to get started.</p>
         </div>
 
         <div class="contact-card">
-          <h3>Have a Question?</h3>
+          <h3>Slides by Harshit</h3>
           <p>
-            Contact me to discuss your presentation requirements before placing
-            an order.
+            Creative PowerPoint presentations for projects, education
+            and business needs.
           </p>
-          <a class="button button-light" href="#order">
-            Start an Enquiry
-          </a>
+          <a href="#order" class="button">Start Your Order →</a>
         </div>
       </div>
     </section>
@@ -904,1365 +670,30 @@
 
   <footer>
     <div class="container">
-      <p><strong>Slides by Harshit</strong></p>
-      <p>Professional Presentation Design</p>
-      <p style="margin-top:8px;">
-        © <span id="year"></span> Slides by Harshit. All rights reserved.
-      </p>
+      <p>© <span id="year"></span> Slides by Harshit. All rights reserved.</p>
+      <p>Designed with creativity and care.</p>
     </div>
   </footer>
 
   <script>
+    const menuButton = document.getElementById("menuButton");
+    const navigation = document.getElementById("navigation");
+
+    menuButton.addEventListener("click", function () {
+      const isOpen = navigation.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navigation.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navigation.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+
     document.getElementById("year").textContent =
       new Date().getFullYear();
-
-    /*
-      IMPORTANT:
-      Replace the URL below with your actual Google Form URL.
-      Example:
-      https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform
-    */
-    const GOOGLE_FORM_URL =
-      "PASTE_YOUR_GOOGLE_FORM_URL_HERE";
-
-    document.getElementById("orderForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      if (
-        !GOOGLE_FORM_URL ||
-        GOOGLE_FORM_URL === "PASTE_YOUR_GOOGLE_FORM_URL_HERE"
-      ) {
-        alert(
-          "Order form abhi connect nahi hai. index.html ke JavaScript section mein apna Google Form URL paste karo."
-        );
-        return;
-      }
-
-      const formUrl = new URL(GOOGLE_FORM_URL);
-
-      if (
-        formUrl.hostname !== "docs.google.com" ||
-        !formUrl.pathname.includes("/forms/")
-      ) {
-        alert("Please enter a valid Google Forms URL.");
-        return;
-      }
-
-      window.open(GOOGLE_FORM_URL, "_blank", "noopener,noreferrer");
-    });
   </script>
-
-</body>
-</html>
-```<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Slides by Harshit creates professional PowerPoint presentations for students, colleges, IT projects and businesses.">
-
-<title>Slides by Harshit | Professional PPT Design</title>
-
-<style>
-:root {
-  --navy: #06152f;
-  --navy2: #0c3270;
-  --blue: #1677ff;
-  --cyan: #18cfff;
-  --ink: #102044;
-  --muted: #61708c;
-  --bg: #f5f8fc;
-  --white: #ffffff;
-  --line: #dfe7f2;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 85px;
-}
-
-body {
-  font-family: Inter, "Segoe UI", Arial, sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  font: inherit;
-}
-
-.wrap {
-  width: 100%;
-  max-width: 1180px;
-  margin: auto;
-  padding: 0 24px;
-}
-
-/* NAVIGATION */
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255,255,255,.97);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
-}
-
-.nav {
-  min-height: 76px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 800;
-  line-height: 1.25;
-}
-
-.brand img {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  object-fit: contain;
-  background: white;
-}
-
-.brand small {
-  display: block;
-  color: #70809b;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 1.2px;
-  margin-top: 5px;
-}
-
-.links {
-  display: flex;
-  align-items: center;
-  gap: 23px;
-}
-
-.links a {
-  color: #53627c;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.links a:hover {
-  color: var(--blue);
-}
-
-.links .navbtn {
-  background: var(--blue);
-  color: white;
-  padding: 11px 17px;
-  border-radius: 10px;
-}
-
-.links .navbtn:hover {
-  background: var(--navy2);
-  color: white;
-}
-
-.menuBtn {
-  display: none;
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 9px;
-  padding: 9px 12px;
-  cursor: pointer;
-}
-
-/* BUTTONS */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  border-radius: 11px;
-  padding: 13px 20px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: transform .2s, box-shadow .2s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 22px #06152f18;
-}
-
-.primary {
-  background: linear-gradient(90deg, var(--blue), var(--cyan));
-  color: #04152d;
-}
-
-.ghost {
-  border: 1px solid #7185a5;
-  color: white;
-  margin-left: 10px;
-}
-
-/* HERO */
-
-.hero {
-  background:
-    radial-gradient(circle at 85% 20%, #174a91 0, #0c3270 28%, #06152f 68%);
-  color: white;
-  padding: 78px 0 74px;
-  overflow: hidden;
-}
-
-.heroGrid {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 48px;
-  align-items: center;
-}
-
-.tag {
-  display: inline-block;
-  border: 1px solid rgba(24,207,255,.4);
-  color: #9cefff;
-  padding: 8px 13px;
-  border-radius: 99px;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.hero h1 {
-  font-size: clamp(42px, 6vw, 72px);
-  line-height: 1.05;
-  margin: 20px 0;
-}
-
-.hero h1 span {
-  color: var(--cyan);
-}
-
-.hero p {
-  font-size: 17px;
-  line-height: 1.9;
-  color: #c8d5e9;
-  max-width: 630px;
-}
-
-.heroFeatures {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-top: 30px;
-}
-
-.feature {
-  border: 1px solid #ffffff20;
-  background: #ffffff0c;
-  padding: 14px;
-  border-radius: 12px;
-  font-size: 13px;
-  color: #dbe7f7;
-}
-
-.feature strong {
-  display: block;
-  margin-bottom: 4px;
-  color: white;
-}
-
-.heroCard {
-  background: #ffffff0e;
-  border: 1px solid #ffffff25;
-  border-radius: 24px;
-  padding: 30px;
-  box-shadow: 0 20px 65px #0002;
-}
-
-.heroCard h3 {
-  margin-bottom: 22px;
-  font-size: 23px;
-}
-
-.checks {
-  display: grid;
-  gap: 16px;
-  color: #dbe7f7;
-  font-size: 14px;
-}
-
-.checks div::before {
-  content: "✓";
-  color: var(--cyan);
-  font-weight: 900;
-  margin-right: 11px;
-}
-
-/* GENERAL SECTIONS */
-
-section {
-  padding: 76px 0;
-}
-
-.sectionHead {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 40px;
-}
-
-.sectionHead h2 {
-  font-size: clamp(29px, 4vw, 40px);
-  line-height: 1.2;
-  margin-bottom: 12px;
-}
-
-.sectionHead p {
-  color: var(--muted);
-  line-height: 1.8;
-}
-
-.eyebrow {
-  color: var(--blue);
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 10px;
-}
-
-/* SERVICES */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 25px;
-  box-shadow: 0 8px 30px #0c224608;
-  transition: transform .2s, box-shadow .2s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 35px #0c224612;
-}
-
-.icon {
-  font-size: 31px;
-  margin-bottom: 5px;
-}
-
-.card h3 {
-  margin: 10px 0 8px;
-}
-
-.card p {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-/* PRICING */
-
-.pricing {
-  background: #eef4fb;
-}
-
-.priceGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.priceCard {
-  position: relative;
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 9px 28px #10204408;
-  transition: transform .2s, box-shadow .2s;
-}
-
-.priceCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 35px #10204412;
-}
-
-.priceCard.featured {
-  border: 2px solid var(--blue);
-}
-
-.popular {
-  position: absolute;
-  top: -13px;
-  right: 17px;
-  background: var(--blue);
-  color: white;
-  border-radius: 20px;
-  padding: 6px 11px;
-  font-size: 10px;
-  font-weight: 900;
-}
-
-.priceIcon {
-  width: 49px;
-  height: 49px;
-  border-radius: 14px;
-  background: #eaf3ff;
-  display: grid;
-  place-items: center;
-  font-size: 25px;
-}
-
-.priceCard h3 {
-  margin: 17px 0 7px;
-  font-size: 20px;
-}
-
-.priceCard .desc {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.7;
-  min-height: 44px;
-}
-
-.price {
-  font-size: 35px;
-  font-weight: 900;
-  color: var(--navy);
-  margin: 13px 0 3px;
-}
-
-.price small {
-  font-size: 13px;
-  color: var(--muted);
-  font-weight: 600;
-}
-
-.priceCard ul {
-  padding-left: 19px;
-  margin: 10px 0 20px;
-  color: #53627c;
-  font-size: 13px;
-  line-height: 2;
-}
-
-.priceCard .btn {
-  width: 100%;
-  margin-top: auto;
-}
-
-.priceNote {
-  margin-top: 27px;
-  text-align: center;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-/* SAMPLE PRESENTATIONS */
-
-.samples {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.sample {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  overflow: hidden;
-  transition: transform .2s;
-}
-
-.sample:hover {
-  transform: translateY(-4px);
-}
-
-.cover {
-  min-height: 185px;
-  padding: 24px;
-  color: white;
-  background: linear-gradient(135deg, #09214a, #168cff);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.sample:nth-child(2) .cover {
-  background: linear-gradient(135deg, #0b2941, #00a9b8);
-}
-
-.sample:nth-child(3) .cover {
-  background: linear-gradient(135deg, #17224d, #6b7cff);
-}
-
-.sample:nth-child(4) .cover {
-  background: linear-gradient(135deg, #06152f, #635bff);
-}
-
-.sample:nth-child(5) .cover {
-  background: linear-gradient(135deg, #54215e, #ef7d55);
-}
-
-.sample:nth-child(6) .cover {
-  background: linear-gradient(135deg, #174a91, #18cfff);
-}
-
-.cover small {
-  letter-spacing: 1.5px;
-  font-weight: 800;
-}
-
-.cover h3 {
-  font-size: 23px;
-  line-height: 1.3;
-  margin-top: 9px;
-}
-
-.sample .body {
-  padding: 18px;
-}
-
-.sample p {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-/* ORDER SECTION */
-
-.order {
-  background: white;
-}
-
-.orderGrid {
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 36px;
-  align-items: start;
-}
-
-.orderInfo {
-  background: linear-gradient(150deg, #06152f, #0c3270);
-  color: white;
-  border-radius: 24px;
-  padding: 32px;
-}
-
-.orderInfo h2 {
-  font-size: 32px;
-  line-height: 1.25;
-  margin: 18px 0;
-}
-
-.orderInfo p {
-  color: #c3d1e5;
-  line-height: 1.9;
-  font-size: 14px;
-}
-
-.orderInfo ul {
-  padding-left: 20px;
-  margin-top: 20px;
-}
-
-.orderInfo li {
-  margin: 15px 0;
-  color: #d9e4f3;
-  font-size: 14px;
-}
-
-.contactHint {
-  margin-top: 24px;
-  border-top: 1px solid #ffffff25;
-  padding-top: 18px;
-  font-size: 13px;
-  color: #c3d1e5;
-  line-height: 1.8;
-}
-
-.form {
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 25px;
-  box-shadow: 0 10px 35px #0c22400b;
-  min-width: 0;
-}
-
-.form h2 {
-  font-size: 26px;
-  margin-bottom: 8px;
-}
-
-.formIntro {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.8;
-  margin-bottom: 15px;
-}
-
-.google-form-frame {
-  display: block;
-  width: 100%;
-  height: 1450px;
-  border: none;
-  border-radius: 10px;
-  background: #fff;
-}
-
-.formDirectLink {
-  display: inline-block;
-  color: var(--blue);
-  text-decoration: underline;
-  font-weight: 700;
-  font-size: 14px;
-  margin-top: 12px;
-}
-
-.finePrint {
-  font-size: 11px;
-  color: #73819a;
-  line-height: 1.8;
-  margin-top: 15px;
-}
-
-/* FOOTER */
-
-footer {
-  background: #06152f;
-  color: #aebed6;
-  padding: 32px 0;
-  text-align: center;
-  font-size: 13px;
-}
-
-footer strong {
-  color: white;
-  font-size: 17px;
-}
-
-.footerLinks {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-  flex-wrap: wrap;
-  margin-top: 16px;
-}
-
-.footerLinks a:hover {
-  color: var(--cyan);
-}
-
-footer p {
-  margin-top: 17px;
-}
-
-/* RESPONSIVE DESIGN */
-
-@media (max-width: 850px) {
-  .heroGrid,
-  .orderGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .cards,
-  .samples,
-  .priceGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero {
-    padding-top: 55px;
-  }
-
-  .heroCard {
-    max-width: 650px;
-  }
-}
-
-@media (max-width: 600px) {
-  .wrap {
-    padding: 0 17px;
-  }
-
-  .nav {
-    min-height: 68px;
-  }
-
-  .brand img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .brand {
-    font-size: 14px;
-  }
-
-  .brand small {
-    font-size: 9px;
-  }
-
-  .menuBtn {
-    display: block;
-  }
-
-  .links {
-    display: none;
-    position: absolute;
-    top: 68px;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 20px 22px;
-    border-bottom: 1px solid var(--line);
-    flex-direction: column;
-    align-items: stretch;
-    gap: 18px;
-  }
-
-  .links.open {
-    display: flex;
-  }
-
-  .links a {
-    margin: 0;
-  }
-
-  .links .navbtn {
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 43px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .heroFeatures {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  section {
-    padding: 55px 0;
-  }
-
-  .cards,
-  .samples,
-  .priceGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .form,
-  .orderInfo,
-  .heroCard {
-    padding: 21px;
-  }
-
-  .sectionHead h2 {
-    font-size: 31px;
-  }
-
-  .priceCard .desc {
-    min-height: 0;
-  }
-
-  .ghost {
-    margin: 12px 0 0;
-  }
-
-  .google-form-frame {
-    height: 1550px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<!-- NAVIGATION -->
-
-<header>
-  <div class="wrap nav">
-
-    <a class="brand" href="#home">
-      <img
-        src="logo.png"
-        alt="Slides by Harshit logo"
-        onerror="this.style.display='none'"
-      >
-
-      <span>
-        Slides by Harshit
-        <small>PRESENTATION DESIGN STUDIO</small>
-      </span>
-    </a>
-
-    <button
-      class="menuBtn"
-      id="menuBtn"
-      type="button"
-      aria-label="Open navigation"
-      aria-expanded="false"
-    >☰</button>
-
-    <nav class="links" id="navLinks">
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#samples">Samples</a>
-      <a href="#order" class="navbtn">Order Now</a>
-    </nav>
-
-  </div>
-</header>
-
-<main>
-
-<!-- HERO SECTION -->
-
-<section class="hero" id="home">
-  <div class="wrap heroGrid">
-
-    <div>
-      <span class="tag">PROFESSIONAL PPT DESIGN</span>
-
-      <h1>
-        Your idea.<br>
-        <span>Better slides.</span>
-      </h1>
-
-      <p>
-        Turn your ideas into clean, modern and professional PowerPoint
-        presentations for school, college, BCA, IT projects and business.
-      </p>
-
-      <div style="margin-top:25px">
-        <a class="btn primary" href="#pricing">Explore Prices</a>
-        <a class="btn ghost" href="#samples">View Samples</a>
-      </div>
-
-      <div class="heroFeatures">
-        <div class="feature">
-          <strong>⚡ Fast Delivery</strong>
-          Deadline discussed before starting
-        </div>
-
-        <div class="feature">
-          <strong>✓ Original Design</strong>
-          Designed for your topic
-        </div>
-
-        <div class="feature">
-          <strong>₹ Student Friendly</strong>
-          Affordable starting prices
-        </div>
-
-        <div class="feature">
-          <strong>⌂ Online Service</strong>
-          Order from anywhere
-        </div>
-      </div>
-    </div>
-
-    <div class="heroCard">
-      <h3>Why choose Slides by Harshit?</h3>
-
-      <div class="checks">
-        <div>Modern, clean layouts</div>
-        <div>Topic-focused visual design</div>
-        <div>Project, business and BCA presentations</div>
-        <div>Custom requirements and themes</div>
-        <div>Reference document upload option</div>
-        <div>Clear pricing before work begins</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- SERVICES SECTION -->
-
-<section id="services">
-  <div class="wrap">
-
-    <div class="sectionHead">
-      <span class="eyebrow">WHAT WE OFFER</span>
-      <h2>Our Services</h2>
-      <p>Choose the type of presentation you need.</p>
-    </div>
-
-    <div class="cards">
-
-      <article class="card">
-        <div class="icon">🎓</div>
-        <h3>Project PPT</h3>
-        <p>
-          School, college, university projects, assignments and seminars.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">💼</div>
-        <h3>Business PPT</h3>
-        <p>
-          Business plans, pitch decks, proposals, reports and strategies.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">💻</div>
-        <h3>IT &amp; Tech PPT</h3>
-        <p>
-          SQL, programming, data analytics, cybersecurity and software.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">🎨</div>
-        <h3>PPT Redesign</h3>
-        <p>
-          Improve existing slide layouts, formatting and visual consistency.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">📄</div>
-        <h3>PDF / Word to PPT</h3>
-        <p>
-          Convert your provided content into an organised presentation.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">✨</div>
-        <h3>Custom Presentation</h3>
-        <p>
-          Custom themes, colours, layouts and requirements for your topic.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- PRICING SECTION -->
-
-<section class="pricing" id="pricing">
-  <div class="wrap">
-
-    <div class="sectionHead">
-      <span class="eyebrow">SIMPLE STARTING PRICES</span>
-      <h2>Choose Your PPT Service</h2>
-      <p>
-        Select a service and submit your order through our Google Form.
-        Final pricing depends on the slide count, content and complexity.
-      </p>
-    </div>
-
-    <div class="priceGrid">
-
-      <article class="priceCard">
-        <div class="priceIcon">🎓</div>
-
-        <h3>Project PPT</h3>
-
-        <p class="desc">
-          School, college, university and BCA projects.
-        </p>
-
-        <div class="price">₹99<small>+</small></div>
-
-        <ul>
-          <li>Academic presentations</li>
-          <li>Project and seminar slides</li>
-          <li>Student-friendly starting price</li>
-        </ul>
-
-        <button class="btn primary chooseService" type="button">
-          Choose Service
-        </button>
-      </article>
-
-      <article class="priceCard">
-        <div class="priceIcon">💼</div>
-
-        <h3>Business PPT</h3>
-
-        <p class="desc">
-          Business plans, proposals and pitch decks.
-        </p>
-
-        <div class="price">₹199<small>+</small></div>
-
-        <ul>
-          <li>Professional business layouts</li>
-          <li>Strategy and proposal slides</li>
-          <li>Structured visual storytelling</li>
-        </ul>
-
-        <button class="btn primary chooseService" type="button">
-          Choose Service
-        </button>
-      </article>
-
-      <article class="priceCard featured">
-        <span class="popular">TECH FOCUS</span>
-
-        <div class="priceIcon">💻</div>
-
-        <h3>IT &amp; Tech PPT</h3>
-
-        <p class="desc">
-          Data analytics, cybersecurity, software and technology.
-        </p>
-
-        <div class="price">₹299<small>+</small></div>
-
-        <ul>
-          <li>IT and computer science topics</li>
-          <li>Technology-focused layouts</li>
-          <li>Diagrams and visual summaries</li>
-        </ul>
-
-        <button class="btn primary chooseService" type="button">
-          Choose Service
-        </button>
-      </article>
-
-      <article class="priceCard">
-        <div class="priceIcon">🔄</div>
-
-        <h3>PPT Redesign</h3>
-
-        <p class="desc">
-          Give your existing slides a refreshed visual style.
-        </p>
-
-        <div class="price">₹149<small>+</small></div>
-
-        <ul>
-          <li>Layout and formatting improvements</li>
-          <li>Colour and typography consistency</li>
-          <li>Existing PPT editing</li>
-        </ul>
-
-        <button class="btn primary chooseService" type="button">
-          Choose Service
-        </button>
-      </article>
-
-      <article class="priceCard">
-        <div class="priceIcon">📄</div>
-
-        <h3>PDF / Word to PPT</h3>
-
-        <p class="desc">
-          Transform your document content into presentation slides.
-        </p>
-
-        <div class="price">₹149<small>+</small></div>
-
-        <ul>
-          <li>Document-to-slide conversion</li>
-          <li>Organised content structure</li>
-          <li>Readable slide layouts</li>
-        </ul>
-
-        <button class="btn primary chooseService" type="button">
-          Choose Service
-        </button>
-      </article>
-
-      <article class="priceCard">
-        <div class="priceIcon">✨</div>
-
-        <h3>Custom PPT</h3>
-
-        <p class="desc">
-          For specialised topics or custom presentation needs.
-        </p>
-
-        <div class="price">Custom</div>
-
-        <ul>
-          <li>Discuss your requirements</li>
-          <li>Agree on scope and pricing</li>
-          <li>Custom design direction</li>
-        </ul>
-
-        <button class="btn primary chooseService" type="button">
-          Request Quote
-        </button>
-      </article>
-
-    </div>
-
-    <p class="priceNote">
-      Prices are starting prices, not guaranteed final totals.
-      Confirm the final quote and delivery date before work begins.
-    </p>
-
-  </div>
-</section>
-
-<!-- SAMPLE PRESENTATIONS -->
-
-<section id="samples">
-  <div class="wrap">
-
-    <div class="sectionHead">
-      <span class="eyebrow">DESIGN INSPIRATION</span>
-      <h2>Sample Presentations</h2>
-      <p>
-        Example presentation styles. Replace these with your actual work
-        when you have samples ready.
-      </p>
-    </div>
-
-    <div class="samples">
-
-      <article class="sample">
-        <div class="cover">
-          <small>SAMPLE 01</small>
-          <h3>Cyber Security</h3>
-        </div>
-
-        <div class="body">
-          <p>
-            Dark, modern technology presentation with clear visual hierarchy.
-          </p>
-        </div>
-      </article>
-
-      <article class="sample">
-        <div class="cover">
-          <small>SAMPLE 02</small>
-          <h3>Data Analytics</h3>
-        </div>
-
-        <div class="body">
-          <p>
-            Charts, dashboards and clean data presentation layouts.
-          </p>
-        </div>
-      </article>
-
-      <article class="sample">
-        <div class="cover">
-          <small>SAMPLE 03</small>
-          <h3>Business Plan</h3>
-        </div>
-
-        <div class="body">
-          <p>
-            Professional strategy and growth presentation concept.
-          </p>
-        </div>
-      </article>
-
-      <article class="sample">
-        <div class="cover">
-          <small>SAMPLE 04</small>
-          <h3>BCA Project</h3>
-        </div>
-
-        <div class="body">
-          <p>
-            Academic slides for software and computer science projects.
-          </p>
-        </div>
-      </article>
-
-      <article class="sample">
-        <div class="cover">
-          <small>SAMPLE 05</small>
-          <h3>Marketing Strategy</h3>
-        </div>
-
-        <div class="body">
-          <p>
-            Organised campaign, audience and marketing plan slides.
-          </p>
-        </div>
-      </article>
-
-      <article class="sample">
-        <div class="cover">
-          <small>SAMPLE 06</small>
-          <h3>Education</h3>
-        </div>
-
-        <div class="body">
-          <p>
-            Readable educational content with structured sections.
-          </p>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- GOOGLE FORM ORDER SECTION -->
-
-<section class="order" id="order">
-  <div class="wrap orderGrid">
-
-    <div class="orderInfo">
-      <span class="tag">ORDER ONLINE</span>
-
-      <h2>Tell me what you need.</h2>
-
-      <p>
-        Share your topic, selected service, slide count and requirements.
-        Your final price and deadline can be confirmed after reviewing
-        your request.
-      </p>
-
-      <ul>
-        <li>Choose your PPT service</li>
-        <li>Select the number of slides</li>
-        <li>Describe your requirements</li>
-        <li>Submit your request through Google Forms</li>
-        <li>Your response is recorded in the linked Google Sheet</li>
-      </ul>
-
-      <div class="contactHint">
-        <strong>Need a custom quote?</strong><br>
-        Select the Custom PPT option in the form and describe your project.
-      </div>
-    </div>
-
-    <div class="form">
-      <h2>Place Your Order</h2>
-
-      <p class="formIntro">
-        Complete the form below. Select your service and pricing option
-        in the form, then submit your order.
-      </p>
-
-      <iframe
-        class="google-form-frame"
-        id="googleOrderForm"
-        title="Slides by Harshit Order Form"
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdiU_ngr4VNoAn3Vf9SD2mfZwOoszyK9S5N87rqdJZBuWVPLA/viewform?embedded=true"
-        width="100%"
-        height="1450"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
-        loading="lazy">
-        Loading Google Form…
-      </iframe>
-
-      <a
-        class="formDirectLink"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdiU_ngr4VNoAn3Vf9SD2mfZwOoszyK9S5N87rqdJZBuWVPLA/viewform"
-        target="_blank"
-        rel="noopener noreferrer">
-        Open the order form in a new tab
-      </a>
-
-      <p class="finePrint">
-        Prices shown on this website are starting prices. The final price
-        and delivery date will be confirmed after reviewing your requirements.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-
-<footer>
-  <div class="wrap">
-
-    <strong>Slides by Harshit</strong>
-
-    <p>Professional • Creative • Reliable</p>
-
-    <div class="footerLinks">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#samples">Samples</a>
-      <a href="#order">Order Now</a>
-    </div>
-
-    <p>
-      © <span id="year"></span> Slides by Harshit. All rights reserved.
-    </p>
-
-  </div>
-</footer>
-
-<script>
-/* Automatically update the footer year */
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-/* Mobile navigation */
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-
-menuBtn.addEventListener("click", function () {
-  const isOpen = navLinks.classList.toggle("open");
-
-  menuBtn.setAttribute("aria-expanded", String(isOpen));
-  menuBtn.textContent = isOpen ? "✕" : "☰";
-});
-
-navLinks.querySelectorAll("a").forEach(function (link) {
-  link.addEventListener("click", function () {
-    navLinks.classList.remove("open");
-
-    menuBtn.setAttribute("aria-expanded", "false");
-    menuBtn.textContent = "☰";
-  });
-});
-
-/* Pricing cards scroll to the embedded Google Form */
-document.querySelectorAll(".chooseService").forEach(function (button) {
-  button.addEventListener("click", function () {
-    document.getElementById("order").scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  });
-});
-</script>
 
 </body>
 </html>
