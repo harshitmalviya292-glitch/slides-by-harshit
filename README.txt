@@ -1,1 +1,0 @@
-Add your sample PPT/PDF/JPG files here when deploying. The admin upload area can also be used after connecting Google Apps Script.
